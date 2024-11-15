@@ -1,8 +1,16 @@
-export default function Category({ icon, label }) {
+import CategoryItem from "./CategoryItem";
+
+export default function Category() {
     return (<>
-        <button className="flex items-center rounded-full border border-gray-300 bg-white px-4 py-2 shadow-sm">
-            <span className=" mr-2">{icon}</span>
-            <span className="text-gray-700">{label}</span>
-        </button>
-    </>);
+        <div className="max-w-6xl w-full mx-auto m-5 flex items-center space-x-1">
+            <CategoryItem label={"All"}></CategoryItem>
+            <CategoryItem label={"Personal Development"} icon={"📚"}></CategoryItem>
+            <CategoryItem label={"Finance"} icon={"💰"}></CategoryItem>
+            <CategoryItem label={"Business"} icon={"📈"}></CategoryItem>
+            <CategoryItem label={"Sales & Marketing"} icon={"📊"}></CategoryItem>
+            <CategoryItem label={"Arts & Crafts"} icon={"🎨"}></CategoryItem>
+            <CategoryItem label={"More..."} icon={"➕"}></CategoryItem>
+            <CategoryItem label={"filters"} icon={"⚙️"}></CategoryItem>
+        </div>
+    </>)
 }

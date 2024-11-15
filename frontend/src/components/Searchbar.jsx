@@ -1,4 +1,4 @@
-import Category from "./Category";
+
 const SearchIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -19,6 +19,7 @@ const SearchIcon = () => (
 export default function Searchbar() {
     return (
         <>
+            
             <div className="max-w-2xl w-full mx-auto">
                 <div className="relative">
                     <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
@@ -31,16 +32,8 @@ export default function Searchbar() {
                     />
                 </div>
             </div>
-            <div className="max-w-6xl w-full mx-auto m-5 flex items-center space-x-1">
-                <Category label={"All"}></Category>
-                <Category label={"Personal Development"} icon={"📚"}></Category>
-                <Category label={"Finance"} icon={"💰"}></Category>
-                <Category label={"Business"} icon={"📈"}></Category>
-                <Category label={"Sales & Marketing"} icon={"📊"}></Category>
-                <Category label={"Arts & Crafts"} icon={"🎨"}></Category>
-                <Category label={"More..."} icon={"➕"}></Category>
-                <Category label={"filters"} icon={"⚙️"}></Category>
-            </div>
+            
+            
         </>
     );
 }
