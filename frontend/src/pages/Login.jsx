@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Logo from '../components/Logo1';
 import googleLogo from '../assets/googleLogo.png';
 
 const Login = () => {
@@ -13,7 +12,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-200 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="text-3xl font-extrabold text-gray-900 text-center">
           Log in to Skool
