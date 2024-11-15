@@ -12,7 +12,7 @@ const SearchIcon = () => (
         strokeLinejoin="round"
     >
         <circle cx="11" cy="11" r="8" />
-        {/* <line x1="25" y1="25" x2="16.65" y2="16.65" /> */}
+        <line x1="25" y1="25" x2="16.65" y2="16.65" />
     </svg>
 );
 export default function Searchbar() {
