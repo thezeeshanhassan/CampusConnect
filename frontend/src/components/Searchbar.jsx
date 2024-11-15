@@ -1,14 +1,34 @@
-import { Input } from "@/components/ui/input";
+
+const SearchIcon = () => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+        <circle cx="11" cy="11" r="8" />
+        {/* <line x1="25" y1="25" x2="16.65" y2="16.65" /> */}
+    </svg>
+);
 export default function Searchbar() {
     return (
         <>
-            <div className="relative max-w-2xl mx-auto mb-8">
-                <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                <Input
-                    placeholder="Search for anything"
-                    className="pl-10 h-12"
-                >
-                </Input>
+            <div className="max-w-2xl w-full mx-auto">
+                <div className="relative">
+                    <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                        <SearchIcon></SearchIcon>
+                    </div>
+                    <input
+                        type="text"
+                        placeholder="Search for anything"
+                        className="w-full pl-10  pr-4 py-3 bg-white border border-gray-300 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                </div>
             </div>
         </>
     );
