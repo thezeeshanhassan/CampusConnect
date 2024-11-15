@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Logo from '../components/Logo';
+import Logo from '../components/Logo1';
 import googleLogo from '../assets/googleLogo.png';
 
 const Login = () => {
