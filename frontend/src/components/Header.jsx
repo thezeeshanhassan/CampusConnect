@@ -1,6 +1,7 @@
 import Logo from "./Logo1";
 import { useState } from 'react'
 import { ChevronUp } from 'lucide-react'
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
@@ -30,7 +31,7 @@ export default function Header() {
                             )}
                         </div>
                     </div>
-                    <button>Login</button>
+                   <Link to={"/login"}><button className=" border border-gray-300 rounded-md px-4 py-2">Login</button></Link>
                 </div>
             </header>
 

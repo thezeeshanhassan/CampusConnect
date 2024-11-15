@@ -15,7 +15,6 @@ const Login = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-       <Logo/>
         <h2 className="text-3xl font-extrabold text-gray-900 text-center">
           Log in to Skool
         </h2>
