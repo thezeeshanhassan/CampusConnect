@@ -1,4 +1,4 @@
-import Logo from "./Logo";
+import Logo from "./Logo1";
 import { useState } from 'react'
 import { ChevronUp } from 'lucide-react'
 
