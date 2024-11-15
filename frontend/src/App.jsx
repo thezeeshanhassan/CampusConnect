@@ -14,15 +14,16 @@ const routes = createBrowserRouter([
         path: '/',
         element: <Home/>
       },
-      {
-        path: '/login',
-        element: <Login/>
-      },
-      {
-        path: '/signup',
-        element: <SignupPage/>
-      }
+      
     ]
+  },
+  {
+    path: '/login',
+    element: <Login/>
+  },
+  {
+    path: '/signup',
+    element: <SignupPage/>
   }
 ])
 

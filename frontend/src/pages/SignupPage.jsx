@@ -16,12 +16,12 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex  justify-center py-12 sm:px-6 lg:px-8  flex-col px-4 lg:flex-row">
+    <div className="min-h-screen bg-gray-100 flex  justify-center align-middle py-12 sm:px-6 lg:px-8  flex-col px-4 lg:flex-row">
       <div className="sm:mx-auto sm:w-full sm:max-w-md ">
         <Logo />
 
         <p className="text-left text-lg lg:text-2xl  text-gray-900 font-medium mt-3">
-          Everything you need to build community and make money online
+          Everything you need to build community and make moneyonline
         </p>
 
         <ul className="text-left font-semibold lg:text-lg text-gray-900 lg:mt-10 mt-3">

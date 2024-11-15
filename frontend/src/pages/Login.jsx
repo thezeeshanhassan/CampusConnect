@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import Logo from '../components/Logo1';
 import googleLogo from '../assets/googleLogo.png';
-
+import { Link } from 'react-router-dom';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,6 +16,7 @@ const Login = () => {
     <div className="min-h-screen bg-gray-200 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="text-3xl font-extrabold text-gray-900 text-center">
+          <Logo/>
           Log in to Skool
         </h2>
       </div>
@@ -99,9 +101,9 @@ const Login = () => {
 
           <p className="mt-6 text-center text-sm text-gray-600">
             Do not have an account?{' '}
-            <a href="#sign-up" className="font-medium text-blue-600 hover:text-blue-500">
+            <Link to="/signup" className="font-medium text-blue-600 hover:text-blue-500">
               Sign up for free
-            </a>
+            </Link>
           </p>
         </div>
       </div>
