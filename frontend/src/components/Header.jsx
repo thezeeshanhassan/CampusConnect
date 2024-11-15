@@ -31,7 +31,7 @@ export default function Header() {
                             )}
                         </div>
                     </div>
-                   <Link to={"/login"}><button className=" border border-gray-300 rounded-md px-4 py-2">Login</button></Link>
+                   <Link to={"/login"}><button className="border border-gray-300 rounded-md px-4 py-2">Login</button></Link>
                 </div>
             </header>
 

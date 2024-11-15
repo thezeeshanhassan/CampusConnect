@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Login from './pages/Login';
 import HomeLayout from './layout/RootLayout';
 import Home from './pages/Home';
@@ -7,23 +7,23 @@ import './App.css'
 const routes = createBrowserRouter([
   {
     path: '/',
-    element: <HomeLayout/>,
+    element: <HomeLayout />,
     children: [
       {
         path: '/',
-        element: <Home/>
+        element: <Home />
       },
       {
         path: '/login',
-        element: <Login/>
+        element: <Login />
       }
     ]
   }
 ])
 
 function App() {
- 
-  return <div> <RouterProvider router={routes}></RouterProvider></div>   
+
+  return <div> <RouterProvider router={routes}></RouterProvider></div>
 }
 
 export default App
