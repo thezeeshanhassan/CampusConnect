@@ -16,7 +16,7 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex  justify-center align-middle py-12 sm:px-6 lg:px-8  flex-col px-4 lg:flex-row">
+    <div className="min-h-screen bg-gray-100 flex  justify-center items-center py-12 sm:px-6 lg:px-8  flex-col px-4 lg:flex-row">
       <div className="sm:mx-auto sm:w-full sm:max-w-md ">
         <Logo />
 
