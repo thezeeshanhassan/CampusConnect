@@ -3,6 +3,7 @@ import Login from './pages/Login';
 import HomeLayout from './layout/RootLayout';
 import Home from './pages/Home';
 import SignupPage from './pages/SignupPage';
+import AboutComunityPage from './pages/AboutComunityPage';
 import './App.css'
 
 const routes = createBrowserRouter([
@@ -11,10 +12,13 @@ const routes = createBrowserRouter([
     element: <HomeLayout/>,
     children: [
       {
-        path: '/',
+        index: true,
         element: <Home/>
       },
-      
+      {
+        path: '/about',
+        element: <AboutComunityPage/>
+      }
     ]
   },
   {
