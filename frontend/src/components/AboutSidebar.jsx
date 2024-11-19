@@ -1,25 +1,16 @@
+
+import pc from '../assets/pc.jpg';
+
 const AboutSidebar = () => {
     return (
       <div className="max-w-sm rounded-lg bg-white shadow-lg overflow-hidden">
         {/* Header Image Section */}
         <div className="relative">
           <img
-            src="/placeholder.svg?height=200&width=400"
+            src={pc}
             alt="Focus Revolution"
             className="w-full h-[200px] object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-pink-500/80 to-orange-500/80">
-            <div className="p-6 text-white">
-              <div className="text-sm font-medium mb-2">FROM DISTRACTION TO SUCCESS ✧</div>
-              <div className="text-lg font-bold mb-1">
-                ELIMINATE <span className="text-orange-300">PROCRASTINATION</span>
-              </div>
-              <div className="text-lg font-bold mb-2">
-                AND UNLOCK <span className="text-orange-300">INSTANT FOCUS</span>
-              </div>
-              <div className="text-sm">INTERACTIVE PROGRAM</div>
-            </div>
-          </div>
         </div>
   
         {/* Content Section */}

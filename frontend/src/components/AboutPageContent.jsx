@@ -15,15 +15,8 @@ const PlayerAccelerator = () => {
       </div>
 
       <div className="p-4">
-        <div className="flex items-center space-x-4 mb-4">
-          <img
-            src="/placeholder.svg" // Ensure this points to a valid file in the public folder
-            alt="Thumbnail"
-            className="w-12 h-12 rounded"
-          />
-        </div>
 
-        <div className="flex  justify-center items-center space-x-4 text-sm text-gray-600 mb-4">
+        <div className="flex  lg:justify-around justify-start items-center space-x-4 lg:text-lg text-gray-900 lg:font-semibold  font-normal mb-4">
           <div className="flex items-center">
             <Lock className="w-4 h-4 mr-1" />
             <span>Private group</span>
