@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import Searchbar from "../components/Searchbar";
 import Category from "../components/Category";
+import Card from "../components/Cards";
 export default function Home() {
     return (
         <>
@@ -15,6 +15,7 @@ export default function Home() {
                     </div>
                     <Searchbar></Searchbar>
                     <Category></Category>
+                    <Card></Card>
                 </div>
             </div>
 
