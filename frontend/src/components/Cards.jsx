@@ -1,4 +1,3 @@
-import React from 'react';
 import CardItem from './CardItem'; // Import the CommunityCard component
 import gaming1 from '../assets/gaming1.jpg'
 const communities = [
@@ -117,7 +116,7 @@ const communities = [
 
 export default function Card() {
   return (
-    <div className="container mx-auto p-6 max-w-5xl">
+    <div className="container mx-auto p-6 max-w-screen-xl">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {communities.map((community, index) => (
           <CardItem key={index} {...community} ></CardItem>
