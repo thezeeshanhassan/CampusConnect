@@ -2,13 +2,14 @@ import Logo from "./Logo1";
 import { useState } from 'react'
 import { ChevronUp } from 'lucide-react'
 import { Link } from 'react-router-dom';
+import NavIcons from './NavIcons';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
     return (
         <>
 
-            <header className="w-full border-b bg-white">
+            <header className="max-w-screen-xl mx-auto border-b bg-white">
                 <div className="container flex h-16 items-center justify-between px-4">
                     <div className="flex items-center gap-4">
                         <Logo />
@@ -31,7 +32,11 @@ export default function Header() {
                             )}
                         </div>
                     </div>
-                   <Link to={"/login"}><button className="border border-gray-300 rounded-md px-4 py-2">Login</button></Link>
+                    <div className="flex items-center gap-4">
+                    <NavIcons />    
+                    <Link to={"/login"}><button className="border border-gray-300 rounded-md px-4 py-2">Login</button></Link>
+                    </div>
+                   
                 </div>
             </header>
 
