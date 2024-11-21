@@ -1,6 +1,7 @@
 import Searchbar from "../components/Searchbar";
 import Category from "../components/Category";
 import Card from "../components/Cards";
+import { Link } from "react-router-dom";
 export default function Home() {
     return (
         <>
