@@ -85,13 +85,13 @@ export default function CommunityHeader() {
               <Link to="/community" className="text-lg hover:text-black">
                 Community
               </Link>
-              <Link to="/pinned" className="text-lg hover:text-black">
+              <Link to="pinned" className="text-lg hover:text-black">
                 Pinned
               </Link>
-                <Link to="/members" className="text-lg hover:text-black">
+                <Link to="members" className="text-lg hover:text-black">
                 Members
               </Link>
-              <Link to="/about" className="text-lg hover:text-black">
+              <Link to="about" className="text-lg hover:text-black">
                 About
               </Link>
             </div>
