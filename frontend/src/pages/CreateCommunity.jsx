@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
-import Logo1 from '../components/Logo1'
+import Logo1 from '../components/Logo1';
 
 export default function CreateCommunity() {
   const [groupName, setGroupName] = useState('');
   const [cardNumber, setCardNumber] = useState('');
-  const [isFocused, setIsFocused] = useState(false);
+  const [expiryDate, setExpiryDate] = useState('');
+  const [cvc, setCvc] = useState('');
 
-  const isButtonEnabled = groupName.trim() !== '' && cardNumber.trim() !== '';
+  const isButtonEnabled = groupName.trim() !== '' && cardNumber.trim() !== '' && expiryDate.trim() !== '' && cvc.trim() !== '';
 
   return (
     <div className="min-h-screen bg-gray-100 flex justify-center items-center py-12 sm:px-6 lg:px-8  flex-col px-4 lg:flex-row ">
       <div className="sm:mx-auto sm:w-full sm:max-w-md ">
-        <Logo1></Logo1>
+        <Logo1 />
         <p className="text-left text-lg lg:text-2xl  text-gray-900 font-medium mt-3">
-          Everything you need to build community and make moneyonline
+          Everything you need to build community and make money online
         </p>
 
         <ul className="text-left font-semibold lg:text-lg text-gray-900 lg:mt-10 mt-3">
@@ -50,13 +51,11 @@ export default function CreateCommunity() {
                 <input
                   type="text"
                   placeholder="Group name"
-                  className="flex-1 outline-none px-2  py-2 text-sm placeholder-gray-400"
+                  className="flex-1 outline-none px-2 py-2 text-sm placeholder-gray-400"
+                  value={groupName} 
+                  onChange={(e) => setGroupName(e.target.value)} 
                 />
               </div>
-            </div>
-            <div className="flex justify-between mt-1 text-xs text-gray-500">
-              <span>You can change this later</span>
-              <span>{`${groupName.length} / 30`}</span>
             </div>
           </div>
           <div className="border rounded-md p-4 shadow-sm w-full max-w-md">
@@ -76,9 +75,11 @@ export default function CreateCommunity() {
 
                 {/* Card Number Input */}
                 <input
-                  type="Number"
+                  type="number"
                   placeholder="Card number"
                   className="flex-1 outline-none px-2 py-2 text-sm placeholder-gray-400"
+                  value={cardNumber} 
+                  onChange={(e) => setCardNumber(e.target.value)} 
                 />
               </div>
             </div>
@@ -89,9 +90,11 @@ export default function CreateCommunity() {
               <div className="flex flex-col w-2/3">
                 <label className="text-sm font-medium text-gray-600 mb-1">Expiry Date</label>
                 <input
-                  type="text"
+                  type="number"
                   placeholder="MM / YY"
                   className="w-full border rounded-md px-2 py-2 outline-none text-sm placeholder-gray-400"
+                  value={expiryDate} 
+                  onChange={(e) => setExpiryDate(e.target.value)} 
                 />
               </div>
 
@@ -99,9 +102,11 @@ export default function CreateCommunity() {
               <div className="flex flex-col w-1/3">
                 <label className="text-sm font-medium text-gray-600 mb-1">CVC</label>
                 <input
-                  type="Number"
+                  type="number"
                   placeholder="CVC"
                   className="w-full border rounded-md px-2 py-2 outline-none text-sm placeholder-gray-400"
+                  value={cvc} 
+                  onChange={(e) => setCvc(e.target.value)} 
                 />
               </div>
             </div>
@@ -125,4 +130,3 @@ export default function CreateCommunity() {
     </div>
   );
 };
-

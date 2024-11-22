@@ -30,6 +30,10 @@ const routes = createBrowserRouter([
   {
     path: '/signup',
     element: <SignupPage/>
+  },
+  {
+    path: '/createcommunity',
+    element: <CreateCommunity/>
   }
 ])
 
