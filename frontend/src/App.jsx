@@ -4,6 +4,8 @@ import HomeLayout from './layout/RootLayout';
 import Home from './pages/Home';
 import SignupPage from './pages/SignupPage';
 import AboutComunityPage from './pages/AboutComunityPage';
+import CommunityPage from './pages/CommunityPage';
+import CommunityLayout from './layout/CommunityLayout';
 import './App.css'
 import CreateCommunity from './pages/CreateCommunity';
 
@@ -24,12 +26,26 @@ const routes = createBrowserRouter([
     ]
   },
   {
+    path: '/create-community',
+    element: <CreateCommunity/>
+  },
+  {
     path: '/login',
     element: <Login/>
   },
   {
     path: '/signup',
     element: <SignupPage/>
+  },
+  {
+    path: '/community',
+    element: <CommunityLayout/>,
+    children: [
+      {
+        index: true,
+        element: <CommunityPage/>
+      }
+    ]
   }
 ])
 
