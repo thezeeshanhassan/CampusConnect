@@ -26,6 +26,10 @@ const routes = createBrowserRouter([
     ]
   },
   {
+    path: '/create-community',
+    element: <CreateCommunity/>
+  },
+  {
     path: '/login',
     element: <Login/>
   },
