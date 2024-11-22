@@ -29,57 +29,82 @@ export default function CreateCommunity() {
           Free for 14 days, then $99/month. Cancel anytime. All features. Unlimited everything. No hidden fees.
         </p>
         <form className="space-y-4">
-          {/* <div>
-            <label htmlFor="groupName" className="block text-sm font-medium text-gray-700">
-              Group name
-            </label>
-            <input
-              type="text"
-              id="groupName"
-              value={groupName}
-              onChange={(e) => setGroupName(e.target.value)}
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-              placeholder="You can change this later"
-            />
-          </div> */}
           <div className="relative mt-4">
             <div className="relative">
-              <input
-                type="text"
-                id="groupName"
-                value={groupName}
-                onChange={(e) => setValue(e.target.value)}
-                onFocus={() => setIsFocused(true)}
-                onBlur={() => setIsFocused(false)}
-                className="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:border-gray-300 peer"
-                placeholder=" "
-              />
-              <label
-                htmlFor="groupName"
-                className={`absolute left-3 px-1 text-gray-500 transition-all duration-200 transform 
-            ${groupName || isFocused ? '-top-2.5 text-sm bg-white' : 'top-2 text-base bg-transparent'}
-            peer-focus:-top-2.5 peer-focus:text-sm peer-focus:bg-white`}
-              >
-                Group name
-              </label>
+              <div className="flex items-center border rounded-md px-2 py-1">
+                {/* Group Icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 text-gray-500"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 3a7 7 0 100 14 7 7 0 000-14zm3 8a3 3 0 11-6 0 3 3 0 016 0zm1 5c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v.5h8V16z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+
+                {/* Group Name Input */}
+                <input
+                  type="text"
+                  placeholder="Group name"
+                  className="flex-1 outline-none px-2  py-2 text-sm placeholder-gray-400"
+                />
+              </div>
             </div>
             <div className="flex justify-between mt-1 text-xs text-gray-500">
               <span>You can change this later</span>
               <span>{`${groupName.length} / 30`}</span>
             </div>
           </div>
-          <div>
-            <label htmlFor="cardNumber" className="block text-sm font-medium text-gray-700">
-              Card number
-            </label>
-            <input
-              type="text"
-              id="cardNumber"
-              value={cardNumber}
-              onChange={(e) => setCardNumber(e.target.value)}
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-              placeholder="Autofill link"
-            />
+          <div className="border rounded-md p-4 shadow-sm w-full max-w-md">
+            {/* Card Number Row */}
+            <div className="flex flex-col mb-4">
+              <label className="text-sm font-medium text-gray-600 mb-1">Card Number</label>
+              <div className="flex items-center border rounded-md px-2 py-1">
+                {/* Card Icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 text-gray-500"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm13 4H3V5h14v2z" />
+                </svg>
+
+                {/* Card Number Input */}
+                <input
+                  type="Number"
+                  placeholder="Card number"
+                  className="flex-1 outline-none px-2 py-2 text-sm placeholder-gray-400"
+                />
+              </div>
+            </div>
+
+            {/* Expiry Date and CVC Row */}
+            <div className="flex justify-between space-x-2">
+              {/* Expiry Date Field */}
+              <div className="flex flex-col w-2/3">
+                <label className="text-sm font-medium text-gray-600 mb-1">Expiry Date</label>
+                <input
+                  type="text"
+                  placeholder="MM / YY"
+                  className="w-full border rounded-md px-2 py-2 outline-none text-sm placeholder-gray-400"
+                />
+              </div>
+
+              {/* CVC Field */}
+              <div className="flex flex-col w-1/3">
+                <label className="text-sm font-medium text-gray-600 mb-1">CVC</label>
+                <input
+                  type="Number"
+                  placeholder="CVC"
+                  className="w-full border rounded-md px-2 py-2 outline-none text-sm placeholder-gray-400"
+                />
+              </div>
+            </div>
           </div>
           <button
             type="submit"
