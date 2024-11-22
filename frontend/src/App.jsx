@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import SignupPage from './pages/SignupPage';
 import AboutComunityPage from './pages/AboutComunityPage';
 import './App.css'
+import CreateCommunity from './pages/CreateCommunity';
 
 const routes = createBrowserRouter([
   {
