@@ -1,8 +1,12 @@
 const express = require("express");
+require('dotenv').config();
 
 const app = express();  // express 
 const userRouter = require('./routes/user');
+const connectDB = require("./db");
 
+
+connectDB();
 app.get('/', function(req, res) {
     res.send('Hello, World!');
 });
