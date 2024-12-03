@@ -6,21 +6,21 @@ require('dotenv').config();
 const userRouter = require('./routes/user');
 const connectDB = require("./db");
 const app = express();
-
+const communityRouter = require('./routes/Community');
 connectDB();
 
 //Middleware 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(passport.initialize()); //It initialize the passport lib
-app.use(passport.session()); //it starts the session so same user can to different tabs
+// app.use(passport.session()); //it starts the session so same user can to different tabs
 
 //Routes
 app.get('/', function (req, res) {
     res.send('Hello, World!');
 });
 app.use('/api/v1/user', userRouter);
-
+app.use('/api/v1/communities', communityRouter);
 
 
 
