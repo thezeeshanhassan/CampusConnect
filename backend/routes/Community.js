@@ -3,7 +3,7 @@ const Community = require('../models/Community')
 const router = express.Router();
 
 
-// Route: Create Community
+// Route: Create Communityy
 router.post('/create', async (req, res) => {
     try {
         const { name, description, pricing } = req.body;
