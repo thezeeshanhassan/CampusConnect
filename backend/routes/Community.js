@@ -66,6 +66,7 @@ router.post('/:id/pin-post', async (req, res) => {
     }
 });
 
+
 router.get('/:id/pinned-posts', async (req, res) => {
     try {
         const community = await Community.findById(req.params.id).populate('pinnedPosts');
