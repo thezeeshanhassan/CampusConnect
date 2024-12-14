@@ -35,6 +35,9 @@ app.use(passport.session()); //Checks Requests and Response and Session Details 
 passport.use(new localStrategy(User.authenticate())); //Authenticate Every User with Local Stratgery
 passport.serializeUser(User.serializeUser()); // Store User Information in Session (Serialization)
 passport.deserializeUser(User.deserializeUser());
+app.use(passport.initialize()); //It initialize the passport lib
+// app.use(passport.session()); //it starts the session so same user can to different tabs
+
 //Routes
 app.get('/', function (req, res) {
     res.send('Hello, World!');
