@@ -3,7 +3,10 @@ const passportLocalMongoose = require(`passport-local-mongoose`);
 
 const userSchema = new mongoose.Schema({
     username: {
-        type: String
+        type: String,
+        unique: true,
+        required: true,
+        trim: true
     },
     fname: {
         type: String,
@@ -23,7 +26,6 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: true,
         minlength: 8
     },
     communities: [
