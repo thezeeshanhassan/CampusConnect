@@ -8,7 +8,7 @@ const connectDB = require("./db");
 const User = require("./models/user");
 const JWT_SECRET = process.env.SESSION_SECRET;
 const app = express();
-
+const communityRouter = require('./routes/Community');
 connectDB();
 
 //Middleware 
@@ -43,7 +43,7 @@ app.get('/', function (req, res) {
     res.send('Hello, World!');
 });
 app.use('/api/v1/user', userRouter);
-
+app.use('/api/v1/communities', communityRouter);
 
 
 
