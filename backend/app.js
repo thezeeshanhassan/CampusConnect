@@ -9,7 +9,10 @@ const User = require("./models/user");
 const JWT_SECRET = process.env.SESSION_SECRET;
 const app = express();
 const communityRouter = require('./routes/Community');
+const cors = require('cors');
 connectDB();
+
+app.use(cors());
 
 //Middleware 
 app.use(express.json());

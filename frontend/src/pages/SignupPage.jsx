@@ -1,18 +1,36 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Form } from "react-router-dom";
 import Logo from "../components/Logo1";
+import axios from "axios";
 
 const SignupPage = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [FName, setFName] = useState("");
-  const [LName, setLName] = useState("");
+  const [fname, setFName] = useState("");
+  const [lname, setLName] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle login logic here
-    console.log("Signup attempted with:", email, password);
+    axios.post("http://localhost:3000/api/v1/user/signup", {
+      email,
+      password,
+      fname,
+      lname,
+      username,
+    },).then((res) => {
+      console.log(res);
+     if(res.status === 200){
+      const token = res.data.token;
+      localStorage.setItem("token", token);
+      navigate("/");
+     }
+    }).catch((err) => {
+      console.log(err);
+    });
   };
 
   return (
@@ -42,19 +60,19 @@ const SignupPage = () => {
           <Form onSubmit={handleSubmit} className="space-y-3">
             <div>
               <label
-                htmlFor="FName"
+                htmlFor="fname"
                 className="block text-sm font-medium text-gray-700"
               >
                 First Name
               </label>
               <div className="mt-1">
                 <input
-                  id="FName"
-                  name="FName"
+                  id="fname"
+                  name="fname"
                   type="text"
-                  autoComplete="FName"
+                  autoComplete="fname"
                   required
-                  value={FName}
+                  value={fname}
                   onChange={(e) => setFName(e.target.value)}
                   className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
@@ -63,19 +81,19 @@ const SignupPage = () => {
 
             <div>
               <label
-                htmlFor="LName"
+                htmlFor="lname"
                 className="block text-sm font-medium text-gray-700"
               >
                 Last Name
               </label>
               <div className="mt-1">
                 <input
-                  id="LName"
-                  name="LName"
+                  id="lname"
+                  name="lname"
                   type="text"
-                  autoComplete="LName"
+                  autoComplete="lname"
                   required
-                  value={LName}
+                  value={lname}
                   onChange={(e) => setLName(e.target.value)}
                   className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 />
@@ -103,6 +121,26 @@ const SignupPage = () => {
               </div>
             </div>
 
+            <div>
+              <label
+                htmlFor="username"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Username
+              </label>
+              <div className="mt-1">
+                <input
+                  id="username"
+                  name="username"
+                  type="text"
+                  autoComplete="username"
+                  required
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                />
+              </div>
+            </div>
             <div>
               <label
                 htmlFor="password"
