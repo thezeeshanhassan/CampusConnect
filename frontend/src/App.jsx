@@ -7,6 +7,10 @@ import AboutComunityPage from "./pages/AboutComunityPage";
 import CommunityPage from "./pages/CommunityPage";
 import CommunityLayout from "./layout/CommunityLayout";
 import MembersCommunityPage from "./pages/MembersCommunityPage";
+import ProfilePage from "./pages/ProfilePage";
+import SettingPage from "./pages/SettingPage";
+import Chat from "./pages/chatPage";
+import Notification from "./pages/NotificationPage";
 import "./App.css";
 import CreateCommunity from "./pages/CreateCommunity";
 
@@ -22,6 +26,19 @@ const routes = createBrowserRouter([
       {
         path: "/about",
         element: <AboutComunityPage />,
+      },
+      {
+        path: "/profile",
+        element: <ProfilePage />,
+      },
+      { path: "/settings", element: <SettingPage /> },
+      {
+        path: "/chat",
+        element: <Chat></Chat>,
+      },
+      {
+        path: "/notifications",
+        element: <Notification />,
       },
     ],
   },
