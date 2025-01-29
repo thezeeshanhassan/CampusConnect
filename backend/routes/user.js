@@ -30,7 +30,6 @@ const updateSchema = z.object({
     password: z.string().min(8, { message: "Password must be at least 8 characters" }),
     fname: z.string().min(5, { message: "Firstname must be at least 5 characters" }),
     lname: z.string().optional(),
-    username: z.string().min(5, { message: "Username must be at least 3 characters" })
 });
 
 
@@ -40,7 +39,6 @@ router.get('/', function (req, res) {
 
 
 router.post('/signup', async (req, res) => {
-
     try {
         const { success } = signupSchema.safeParse(req.body);
         if (!success) {
