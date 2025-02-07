@@ -9,6 +9,7 @@ const User = require("./models/user");
 const JWT_SECRET = process.env.SESSION_SECRET;
 const app = express();
 const communityRouter = require('./routes/Community');
+const postRouter = require('./routes/post');
 const cors = require('cors');
 connectDB();
 
@@ -47,7 +48,7 @@ app.get('/', function (req, res) {
 });
 app.use('/api/v1/user', userRouter);
 app.use('/api/v1/communities', communityRouter);
-
+app.use('/api/v1/post', postRouter);
 
 
 // Error Handling
